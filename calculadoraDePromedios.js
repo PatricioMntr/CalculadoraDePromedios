@@ -38,20 +38,18 @@ let alumno = {
       suma += this.notas[i];
     }
     this.promedio = suma / this.notas.length;
+  },
+  mostrarPromedio: function() {
+    alert("El promedio de " + this.nombre + " es " + this.promedio);
   }
 };
-
-alumno.pedirDatos();
-alumno.calcularPromedio();
-
 console.log(alumno.nombre);
 console.log(alumno.notas);
 console.log(alumno.promedio);
 
-function pedirValorNoVacio(mensaje) {
-  let valor;
-  do {
-    valor = prompt(mensaje);
-  } while (valor.trim() === "");
-  return valor;
-}
+alumno.pedirDatos();
+alumno.calcularPromedio();
+alumno.mostrarPromedio();
+
+
+
